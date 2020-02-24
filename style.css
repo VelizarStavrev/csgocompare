@@ -97,6 +97,46 @@ main {
     height: 100%;
     width: 100%;
     background-color: rgb(150, 150, 150);
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: "generalinfo competitiveinfo faceitinfo inventoryinfo";
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.generalinfo {
+    grid-area: generalinfo;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-self: start;
+    text-align: left;
+}
+
+.generalinfo img {
+    width: 184px;
+    height: 184px;
+    padding-top: 30px;
+}
+
+.generalinfo p {
+    width: 100%;
+    margin: 0;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+
+.competitiveinfo {
+    grid-area: competitiveinfo;
+}
+
+.faceitinfo {
+    grid-area: faceitinfo;
+}
+
+.inventoryinfo {
+    grid-area: inventoryinfo;
 }
 
 /* ADS */

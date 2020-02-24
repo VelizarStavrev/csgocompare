@@ -16,14 +16,38 @@
                 <img src="images/logo.svg" alt="logo">
             </div>
             <div class="searchbar">
-                <input type="text" placeholder="Enter name..." autocomplete="off">
+                <input id="search" type="text" placeholder="Enter name..." autocomplete="off">
             </div> 
             <div class="button">
-                <button onclick="httpGetAsync();">SEARCH</button>
+                <button onclick="getCSStats();getSteamStats()">SEARCH</button>
+                <!-- getStats(); -->
             </div>
         </nav>
 
-        <main>mainwindow</main>
+        <main>
+
+            <div class="generalinfo">
+                <img id="avatar" src="images/siteicon.svg" alt="avatar">
+                <p id="nick">Username:</p>
+                <p id="personID">ID:</p>
+                <p id="statOne">Stat 1:</p>
+                <p id="statTwo">Stat 2:</p>
+                <p id="statThree">Stat 3:</p>
+            </div>
+
+            <div class="competitiveinfo">
+                competitive
+            </div>
+
+            <div class="faceitinfo">
+                faceit
+            </div>
+
+            <div class="inventoryinfo">
+                inventory
+            </div>
+
+        </main>
 
         <div class="ads">
             <div class="ad1">
@@ -40,7 +64,5 @@
 
     </div>
 
-
-    <script>src="http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=8A83A42008F83E486594C9D7374CC977&steamid=76561198050060764"</script>
 </body>
 </html>

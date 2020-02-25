@@ -41,8 +41,8 @@ nav {
     background-color: rgb(50, 50, 50);
     color: white;
     display: grid;
-    grid-template-columns: 2.5% 10% 5% 55% 5% 20% 2.5%;
-    grid-template-areas: ". logo . searchbar . button .";
+    grid-template-columns: 2.5% 10%  2.5% 10%     2.5% 24%      2.5% 4.5%    2.5%  24%    2.5% 10%     2.5%;
+    grid-template-areas:   ".   logo .    button1 .    searchbar1 .    iconvs .    searchbar2 .    button2 .";
     justify-items: center;
     align-items: center;
 }
@@ -57,20 +57,40 @@ nav {
     height: 45px;
 }
 
+.iconvs {
+    grid-area: iconvs;
+}
+
+.iconvs img {
+    height: 45px;
+}
+
+.searchbar1 {
+    grid-area: searchbar1;
+}
+
+.searchbar2 {
+    grid-area: searchbar2;
+}
+
 .searchbar {
-    grid-area: searchbar;
     width: 100%;
 }
 
 .searchbar input {
-    width: 100%;
+    width: 90%;
     padding: 7.5px;
     background-color: rgb(100, 100, 100);
     border: 2px solid rgb(255, 100, 0);
 }
 
-.button {
-    grid-area: button;
+.button1 {
+    grid-area: button1;
+    width: 100%;
+}
+
+.button2 {
+    grid-area: button2;
     width: 100%;
 }
 
@@ -99,14 +119,20 @@ main {
     background-color: rgb(150, 150, 150);
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-areas: "generalinfo competitiveinfo faceitinfo inventoryinfo";
+    grid-template-areas: "generalinfo1 csgoinfo1 csgoinfo2 generalinfo2";
     justify-items: center;
     align-items: center;
-    
+}
+
+.generalinfo1 {
+    grid-area: generalinfo1; 
+}
+
+.generalinfo2 {
+    grid-area: generalinfo2;
 }
 
 .generalinfo {
-    grid-area: generalinfo;
     width: 100%;
     display: grid;
     justify-items: center;
@@ -115,28 +141,67 @@ main {
 }
 
 .generalinfo img {
-    width: 184px;
     height: 184px;
-    padding-top: 30px;
+    width: 184px;
+    margin-top: 30px;
+    border: 2px solid rgb(50, 50, 50);
+}
+
+.generalinfo .text{
+    width: 184px;
+    padding-top: 20px;
 }
 
 .generalinfo p {
     width: 100%;
     margin: 0;
-    padding-left: 55px;
     padding-top: 10px;
 }
 
-.competitiveinfo {
-    grid-area: competitiveinfo;
+.csgoinfo1 {
+    grid-area: csgoinfo1;
 }
 
-.faceitinfo {
-    grid-area: faceitinfo;
+.csgoinfo2 {
+    grid-area: csgoinfo2;
 }
 
-.inventoryinfo {
-    grid-area: inventoryinfo;
+.csgoinfo {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-self: start;
+    text-align: left;
+}
+
+.csgoinfo .text{
+    width: 184px;
+}
+
+.csgoinfo p {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.button3 {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.button3 a {
+    width: 100%;
+    padding: 7.5px 30px;
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 100, 0);
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.button3 a:hover {
+    background-color: rgb(200, 200, 200);
+    color: rgb(50, 50, 50);
 }
 
 /* ADS */

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS:GO STATS</title>
+    <title>CS:GO COMPARE</title>
     <link rel="icon" href="./images/siteicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,35 +15,87 @@
             <div class="logo">
                 <img src="images/logo.svg" alt="logo">
             </div>
-            <div class="searchbar">
-                <input id="search" type="text" placeholder="Enter name..." autocomplete="off">
+            <div class="searchbar searchbar1">
+                <input id="search1" type="text" placeholder="Enter Steam ID..." autocomplete="off">
             </div> 
-            <div class="button">
-                <button onclick="getStats();">SEARCH</button>  
+            <div class="button button1">
+                <button onclick="getStats1();">SEARCH</button>
+            </div>
+            <div class="iconvs">
+                <img src="images/iconvs.svg" alt="iconvs">
+            </div>
+            <div class="searchbar searchbar2">
+                <input id="search2" type="text" placeholder="Enter Steam ID..." autocomplete="off">
+            </div> 
+            <div class="button button2">
+                <button onclick="getStats2();">SEARCH</button>
             </div>
         </nav>
 
         <main>
 
-            <div class="generalinfo">
-                <img id="avatar" src="images/siteicon.svg" alt="avatar">
-                <p id="nick">Username:</p>
-                <p id="personID">ID:</p>
-                <p id="statOne">Stat 1:</p>
-                <p id="statTwo">Stat 2:</p>
-                <p id="statThree">Stat 3:</p>
+            <div class="generalinfo generalinfo1">
+                <img id="avatar1" src="images/avatar1.svg" alt="avatar">
+                <div class="text">
+                    <p id="nick1">Nickname:</p>
+                    <p id="personID1">ID:</p>
+                    <p id="name1">Name:</p>
+                    <p id="created1">Created:</p>
+                    <div class="button3">
+                        <a id="link1" href="#" target="_blank">PROFILE</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="competitiveinfo">
-                competitive
+            <div class="csgoinfo csgoinfo1">
+                <h3>Player 1</h3>
+                <div class="text">
+                    <p id="p1s1">Stat 1:</p>
+                    <p id="p1s2">Stat 2:</p>
+                    <p id="p1s3">Stat 3:</p>
+                    <p id="p1s4">Stat 4:</p>
+                    <p id="p1s5">Stat 5:</p>
+                    <p id="p1s6">Stat 6:</p>
+                    <p id="p1s7">Stat 7:</p>
+                    <p id="p1s8">Stat 8:</p>
+                    <p id="p1s9">Stat 9:</p>
+                    <p id="p1s10">Stat 10:</p>
+                    <p id="p1s11">Stat 11:</p>
+                    <p id="p1s12">Stat 12:</p>
+                    <p id="p1s13">Stat 13:</p>
+                </div>
             </div>
 
-            <div class="faceitinfo">
-                faceit
+            <div class="generalinfo generalinfo2">
+                <img id="avatar2" src="images/avatar2.svg" alt="avatar">
+                <div class="text">
+                    <p id="nick2">Nickname:</p>
+                    <p id="personID2">ID:</p>
+                    <p id="name2">Name:</p>
+                    <p id="created2">Created:</p>
+                    <div class="button3">
+                        <a id="link2" href="#" target="_blank">PROFILE</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="inventoryinfo">
-                inventory
+            <div class="csgoinfo csgoinfo2">
+                <h3>Player 2</h3>
+                <div class="text">
+                    <p id="p2s1">Stat 1:</p>
+                    <p id="p2s2">Stat 2:</p>
+                    <p id="p2s3">Stat 3:</p>
+                    <p id="p2s4">Stat 4:</p>
+                    <p id="p2s5">Stat 5:</p>
+                    <p id="p2s6">Stat 6:</p>
+                    <p id="p2s7">Stat 7:</p>
+                    <p id="p2s8">Stat 8:</p>
+                    <p id="p2s9">Stat 9:</p>
+                    <p id="p2s10">Stat 10:</p>
+                    <p id="p2s11">Stat 11:</p>
+                    <p id="p2s12">Stat 12:</p>
+                    <p id="p2s13">Stat 13:</p>
+                </div>
             </div>
 
         </main>

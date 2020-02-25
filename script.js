@@ -67,6 +67,7 @@ function getSteamStats1(steamID) {
             // Stat display
             document.getElementById("avatar1").src = out.response.players[0].avatarfull;
             document.getElementById("nick1").innerHTML = "Nickname: " + out.response.players[0].personaname;
+            document.getElementById("bignick1").innerHTML = out.response.players[0].personaname;
             document.getElementById("name1").innerHTML = "Name: " + out.response.players[0].realname;
             timeConverter1(out.response.players[0].timecreated);
             document.getElementById("link1").href = out.response.players[0].profileurl;
@@ -144,6 +145,7 @@ function getSteamStats2(steamID) {
             document.getElementById("avatar2").src = out.response.players[0].avatarfull;
             document.getElementById("nick2").innerHTML = "Nickname: " + out.response.players[0].personaname;
             document.getElementById("name2").innerHTML = "Name: " + out.response.players[0].realname;
+            document.getElementById("bignick2").innerHTML = out.response.players[0].personaname;
             timeConverter2(out.response.players[0].timecreated);
             document.getElementById("link2").href = out.response.players[0].profileurl;
 

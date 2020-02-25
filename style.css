@@ -41,8 +41,8 @@ nav {
     background-color: rgb(50, 50, 50);
     color: white;
     display: grid;
-    grid-template-columns: 2.5% 10%  2.5% 10%     2.5% 24%      2.5% 4.5%    2.5%  24%    2.5% 10%     2.5%;
-    grid-template-areas:   ".   logo .    button1 .    searchbar1 .    iconvs .    searchbar2 .    button2 .";
+    grid-template-columns: 2.5%  10%     2.5% 27.5%        2.5% 10% 2.5% 27.5%      2.5% 10%     2.5%;
+    grid-template-areas:   ".    button1 .    searchbar1 .    logo .     searchbar2 .    button2 .";
     justify-items: center;
     align-items: center;
 }
@@ -54,14 +54,6 @@ nav {
 
 .logo img {
     width: 100%;
-    height: 45px;
-}
-
-.iconvs {
-    grid-area: iconvs;
-}
-
-.iconvs img {
     height: 45px;
 }
 
@@ -78,10 +70,15 @@ nav {
 }
 
 .searchbar input {
-    width: 90%;
+    box-sizing: border-box;
+    width: 100%;
     padding: 7.5px;
     background-color: rgb(100, 100, 100);
     border: 2px solid rgb(255, 100, 0);
+}
+
+.searchbar input:focus {
+    background-color: rgb(150, 150, 150);
 }
 
 .button1 {
@@ -125,7 +122,7 @@ main {
 }
 
 .generalinfo1 {
-    grid-area: generalinfo1; 
+    grid-area: generalinfo1;
 }
 
 .generalinfo2 {
@@ -160,13 +157,16 @@ main {
 
 .csgoinfo1 {
     grid-area: csgoinfo1;
+    border-right: 2px solid rgb(50, 50, 50);
 }
 
 .csgoinfo2 {
     grid-area: csgoinfo2;
+    border-left: 2px solid rgb(50, 50, 50);
 }
 
 .csgoinfo {
+    height: 100%;
     width: 100%;
     display: grid;
     justify-items: center;
@@ -176,6 +176,13 @@ main {
 
 .csgoinfo .text{
     width: 184px;
+}
+
+h3 {
+    width: 100%;
+    border-bottom: 2px solid rgb(50, 50, 50);
+    text-align: center;
+    margin: 20px 0 5px;
 }
 
 .csgoinfo p {
@@ -235,4 +242,110 @@ footer {
     display: grid;
     justify-items: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 1100px) {
+    /* CONTAINER */
+    .container {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 10vh 5vh 5vh 5vh 60vh 5vh 10vh;
+        grid-template-areas: "nav    nav    nav"
+                             ".      .      ."
+                             ".      ads    ."
+                             ".      .      ."
+                             ".      main   ."
+                             ".      .      ."
+                             "footer footer footer";
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /* CONTAINER */
+    .container {
+        grid-template-columns: 2.5% 95% 2.5%;
+        grid-template-rows: 10vh 5vh 5vh 5vh 60vh 5vh 10vh;
+        grid-template-areas: "nav    nav    nav"
+                             ".      .      ."
+                             ".      ads    ."
+                             ".      .      ."
+                             ".      main   ."
+                             ".      .      ."
+                             "footer footer footer";
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    /* CONTAINER */
+    .container {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: auto 5vh auto 5vh auto 5vh 5vh;
+        grid-template-areas: "nav    nav    nav"
+                             ".      .      ."
+                             ".      ads    ."
+                             ".      .      ."
+                             ".      main   ."
+                             ".      .      ."
+                             "footer footer footer";
+    }
+
+    /* NAVBAR */
+    nav {
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: ". logo ." ". searchbar1 ." ". button1 ." ". searchbar2 ." ". button2 .";
+        row-gap: 2.5vh;
+    }
+
+    .logo img {
+        margin-top: 2.5vh;
+    }
+
+    .button2 button {
+        margin-bottom: 2.5vh;
+    }
+
+    .button button {
+        width: 50%;
+    }
+
+    /* MAIN */
+    main {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "generalinfo1 csgoinfo1"
+                             "generalinfo2 csgoinfo2";
+    }
+
+    .generalinfo img {
+        margin-top: 40px;
+    }
+
+    .csgoinfo .text{
+        width: 100%;
+    }
+
+    .csgoinfo1, .csgoinfo2 {
+        border: none;
+        padding-bottom: 20px;
+    }
+
+    .button3 {
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /* MAIN */
+    main {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "generalinfo1"
+                             "csgoinfo1"
+                             "generalinfo2"
+                             "csgoinfo2";
+    }
+
+    .csgoinfo .text {
+        width: 184px;
+    }
 }

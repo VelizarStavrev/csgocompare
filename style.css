@@ -298,6 +298,7 @@ footer {
 
     .logo img {
         margin-top: 2.5vh;
+        height: 75px;
     }
 
     .button2 button {
@@ -345,7 +346,30 @@ footer {
                              "csgoinfo2";
     }
 
+
+    .generalinfo2 {
+        border-top: 2px solid rgb(50, 50, 50);
+    }
+
     .csgoinfo .text {
         width: 184px;
+    }
+
+    .csgoinfo1 {
+        border-top: 2px solid rgb(50, 50, 50);
+        margin-bottom: 20px;
+    }
+
+    .csgoinfo h3 {
+        margin-bottom: 20px;
+    }
+
+    .csgoinfo2 {
+        margin-bottom: 20px;
+        border-top: 2px solid rgb(50, 50, 50);
+    }
+
+    .button3 {
+        padding-bottom: 30px
     }
 }

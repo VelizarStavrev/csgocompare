@@ -121,6 +121,16 @@ main {
     align-items: center;
 }
 
+.charttest {
+    grid-area: 1 / 2 / 2 / 4;
+    visibility: hidden;
+    background-color: rgb(100, 100, 100);
+    border-left: 2px solid rgb(100, 100, 100);
+    border-right: 2px solid rgb(100, 100, 100);
+    height: 100%;
+    width: 100%;
+}
+
 .generalinfo1 {
     grid-area: generalinfo1;
 }
@@ -191,7 +201,7 @@ h3 {
 }
 
 .button3 {
-    padding-top: 40px;
+    padding-top: 17.5px;
     text-align: center;
 }
 
@@ -201,12 +211,34 @@ h3 {
     background-color: rgb(100, 100, 100);
     color: rgb(255, 100, 0);
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     text-decoration: none;
     border-radius: 15px;
 }
 
-.button3 a:hover {
+.button4 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.button4 button {
+    border: none;
+    padding: 7.5px 30px;
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 100, 0);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button3 a:hover, .button4 button:hover {
+    background-color: rgb(200, 200, 200);
+    color: rgb(50, 50, 50);
+}
+
+.btnhover {
     background-color: rgb(200, 200, 200);
     color: rgb(50, 50, 50);
 }
@@ -242,6 +274,7 @@ footer {
     display: grid;
     justify-items: center;
     align-items: center;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -317,6 +350,16 @@ footer {
                              "generalinfo2 csgoinfo2";
     }
 
+    .charttest {
+        grid-area: 1 / 2 / 3 / 4;
+        visibility: hidden;
+        background-color: rgb(100, 100, 100);
+        border-left: 2px solid rgb(100, 100, 100);
+        border-right: 2px solid rgb(100, 100, 100);
+        height: 100%;
+        width: 100%;
+    }
+
     .generalinfo img {
         margin-top: 40px;
     }
@@ -346,6 +389,14 @@ footer {
                              "csgoinfo2";
     }
 
+    .charttest {
+        grid-area: 2 / 1 / 3 / 2;
+        visibility: hidden;
+        background-color: rgb(100, 100, 100);
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
 
     .generalinfo2 {
         border-top: 2px solid rgb(50, 50, 50);
@@ -370,6 +421,10 @@ footer {
     }
 
     .button3 {
+        padding-bottom: 10px;
+    }
+
+    .button4 {
         padding-bottom: 30px;
     }
 }

@@ -6,9 +6,10 @@
     <title>CS:GO COMPARE</title>
     <link rel="icon" href="./images/siteicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
-    
+
     <div class="container">
 
         <nav>
@@ -40,6 +41,9 @@
                     <p id="created1">Created:</p>
                     <div class="button3">
                         <a id="link1" href="#" target="_blank">PROFILE</a>
+                    </div>
+                    <div class="button4">
+                        <button id="showbtn1" onclick="showChart(1);">CHART</button>
                     </div>
                 </div>
             </div>
@@ -73,6 +77,9 @@
                     <div class="button3">
                         <a id="link2" href="#" target="_blank">PROFILE</a>
                     </div>
+                    <div class="button4">
+                        <button id="showbtn2" onclick="showChart(2);">CHART</button>
+                    </div>
                 </div>
             </div>
 
@@ -94,6 +101,8 @@
                     <p id="p2s13">Stat 13:</p>
                 </div>
             </div>
+
+            <div id="myChart" class="charttest"></div>
 
         </main>
 

@@ -101,7 +101,13 @@ function getCSStats1(steamID) {
             document.getElementById("p1s12").innerHTML = "Bombs Defused: " + out.playerstats.stats[4].value;
             document.getElementById("p1s13").innerHTML = "Hostage Rescues: " + out.playerstats.stats[8].value;
 
-    }).catch(err => console.error(err));
+            stat1 = out.playerstats.stats[0].value;
+            stat2 = out.playerstats.stats[1].value;
+            stat3 = out.playerstats.stats[25].value;
+            drawChart();
+
+        }).catch(err => console.error(err));
+
 }
 
 // USER 2
@@ -178,6 +184,11 @@ function getCSStats2(steamID) {
             document.getElementById("p2s12").innerHTML = "Bombs Defused: " + out.playerstats.stats[4].value;
             document.getElementById("p2s13").innerHTML = "Hostage Rescues: " + out.playerstats.stats[8].value;
 
+            stat4 = out.playerstats.stats[0].value;
+            stat5 = out.playerstats.stats[1].value;
+            stat6 = out.playerstats.stats[25].value;
+            drawChart();
+
     }).catch(err => console.error(err));
 }
 
@@ -201,3 +212,69 @@ function timeConverter2(UNIX_timestamp){
     var time = date + ' ' + month + ' ' + year;
     document.getElementById("created2").innerHTML = "Created: " + time;
 }
+
+// GOOGLE CHARTS
+google.charts.load('current', {packages: ['corechart', 'bar']});
+
+function showChart(number) {
+    var chartVisibility = document.getElementById("myChart").style.visibility;
+    var screenWidth = screen.width;
+
+    if (chartVisibility == "visible") {
+        document.getElementById("myChart").style.visibility = "hidden";
+    } else {
+        document.getElementById("myChart").style.visibility = "visible";
+    }
+
+    if (screenWidth <= 450) {
+        if (number == 1) {
+            document.getElementById("myChart").style.gridArea = "2/1/3/2";
+        } else {
+            document.getElementById("myChart").style.gridArea = "4/1/5/2";
+        }
+    } else {
+        // nothing
+    }
+}
+
+var stat1;
+var stat2;
+var stat3;
+var stat4;
+var stat5;
+var stat6;
+
+function drawChart() {
+    var chartDiv = document.getElementById('myChart');
+
+    var data = google.visualization.arrayToDataTable([
+      ['', 'Player 1', 'Player 2'],
+      ['Kills', stat1, stat4],
+      ['Deaths', stat2, stat5],
+      ['Headshots', stat3, stat6]
+    ]);
+
+    var materialOptions = {
+        hAxis: {
+            textStyle: {color: '#ff6600'}
+        },
+        vAxis: {
+            textStyle: {color: '#ff6600'},
+            baselineColor: '#ff6600',
+            gridlines: {color: '#ff6600'}
+        },
+        legend: {
+            position: 'none',
+            textStyle: {color: '#ff6600'}
+        },
+        backgroundColor: "#646464",
+        colors: ["#969696", "#c8c8c8"]
+    };
+
+    function drawMaterialChart() {
+      var materialChart = new google.charts.Bar(chartDiv);
+      materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+    }
+
+    drawMaterialChart();
+};

@@ -22,10 +22,11 @@ body {
 .container {
     display: grid;
     grid-template-columns: 2.5% 72.5% 2.5% 20% 2.5%;
-    grid-template-rows: 10vh 5vh 70vh 5vh 10vh;
+    grid-template-rows: 10vh 5vh 35vh 35vh 5vh 10vh;
     grid-template-areas: "nav    nav    nav    nav    nav"
                          ".      .      .      .      ."
-                         ".      main   .      ads    ."
+                         ".      main   .      ad1    ."
+                         ".      main   .      ad2    ."
                          ".      .      .      .      ."
                          "footer footer footer footer footer";
     justify-items: center;
@@ -245,19 +246,13 @@ h3 {
 
 /* ADS */
 .ads {
-    grid-area: ads;
     height: 100%;
     width: 100%;
     background-color: rgb(150, 150, 150);
-    display: grid;
-    grid-template-rows: 47.5% 5% 47.5%;
-    grid-template-areas: "ad1" "." "ad2";
-    justify-items: center;
-    align-items: center;
 }
 
 .ad1 {
-    grid-area: ad1;
+    grid-area: ad1;  
 }
 
 .ad2 {
@@ -281,12 +276,14 @@ footer {
     /* CONTAINER */
     .container {
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 10vh 5vh 5vh 5vh 60vh 5vh 10vh;
+        grid-template-rows: 10vh 5vh 5vh 5vh 465px 5vh 5vh 5vh 10vh;
         grid-template-areas: "nav    nav    nav"
                              ".      .      ."
-                             ".      ads    ."
+                             ".      ad1    ."
                              ".      .      ."
                              ".      main   ."
+                             ".      .      ."
+                             ".      ad2    ."
                              ".      .      ."
                              "footer footer footer";
     }
@@ -296,12 +293,13 @@ footer {
     /* CONTAINER */
     .container {
         grid-template-columns: 2.5% 95% 2.5%;
-        grid-template-rows: 10vh 5vh 5vh 5vh 60vh 5vh 10vh;
         grid-template-areas: "nav    nav    nav"
                              ".      .      ."
-                             ".      ads    ."
+                             ".      ad1    ."
                              ".      .      ."
                              ".      main   ."
+                             ".      .      ."
+                             ".      ad2    ."
                              ".      .      ."
                              "footer footer footer";
     }
@@ -311,12 +309,14 @@ footer {
     /* CONTAINER */
     .container {
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: auto 5vh auto 5vh auto 5vh 5vh;
+        grid-template-rows: auto 5vh 5vh 5vh 965px 5vh 5vh 5vh 5vh;
         grid-template-areas: "nav    nav    nav"
                              ".      .      ."
-                             ".      ads    ."
+                             ".      ad1    ."
                              ".      .      ."
                              ".      main   ."
+                             ".      .      ."
+                             ".      ad2    ."
                              ".      .      ."
                              "footer footer footer";
     }
@@ -379,6 +379,11 @@ footer {
 }
 
 @media only screen and (max-width: 450px) {
+    /* CONTAINER */
+    .container {
+        grid-template-rows: auto 5vh 5vh 5vh auto 5vh 5vh 5vh 5vh;
+    }
+
     /* MAIN */
     main {
         grid-template-columns: auto;

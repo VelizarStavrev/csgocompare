@@ -1,0 +1,12 @@
+$colors: (
+    // Darkest - lvl 1; Lightest - lvl 4;
+    graylvl1: #323232,
+    graylvl2: #646464,
+    graylvl3: #969696,
+    graylvl4: #c8c8c8,
+    secondary: #ff6400
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}

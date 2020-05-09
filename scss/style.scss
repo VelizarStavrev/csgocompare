@@ -1,0 +1,273 @@
+/*    CS:GO STATS STYLE   */
+/*    by Velizar Stavrev  */
+
+/* IMPORTS */
+@import 'variables';
+@import 'fonts';
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Roboto-Regular;
+    background-color: color(graylvl4);
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: 2.5% 72.5% 2.5% 20% 2.5%;
+    grid-template-rows: 10vh 5vh 35vh 35vh 5vh 10vh;
+    grid-template-areas: "nav    nav    nav    nav    nav"
+                         ".      .      .      .      ."
+                         ".      main   .      ad1    ."
+                         ".      main   .      ad2    ."
+                         ".      .      .      .      ."
+                         "footer footer footer footer footer";
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* NAVBAR */
+nav {
+    grid-area: nav;
+    height: 100%;
+    width: 100%;
+    background-color: color(graylvl1);
+    color: white;
+    display: grid;
+    grid-template-columns: 2.5%  10%     2.5% 27.5%        2.5% 10% 2.5% 27.5%      2.5% 10%     2.5%;
+    grid-template-areas:   ".    button1 .    searchbar1 .    logo .     searchbar2 .    button2 .";
+    justify-items: center;
+    align-items: center;
+}
+
+.logo {
+    grid-area: logo;
+    align-self: center;
+
+    img {
+        width: 100%;
+        height: 45px;
+    }
+}
+
+.searchbar1 {
+    grid-area: searchbar1;
+}
+
+.searchbar2 {
+    grid-area: searchbar2;
+}
+
+.searchbar {
+    width: 100%;
+
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 7.5px;
+        background-color: color(graylvl2);
+        border: 2px solid color(secondary);
+
+        &:focus {
+            background-color: color(graylvl3);
+        }
+    }
+}
+
+.button1 {
+    grid-area: button1;
+    width: 100%;
+}
+
+.button2 {
+    grid-area: button2;
+    width: 100%;
+}
+
+.button {
+
+    button {
+        padding: 7.5px;
+        width: 100%;
+        color: color(secondary);
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-radius: 15px;
+        border: none;
+        background-color: color(graylvl2);
+        cursor: pointer;
+
+        &:hover {
+            background-color: color(graylvl3);
+            color: color(graylvl1);
+        }
+    }
+}
+
+/* MAIN */
+main {
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+    background-color: color(graylvl3);
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: "generalinfo1 csgoinfo1 csgoinfo2 generalinfo2";
+    justify-items: center;
+    align-items: center;
+}
+
+.charttest {
+    grid-area: 1 / 2 / 2 / 4;
+    visibility: hidden;
+    background-color: color(graylvl2);
+    border-left: 2px solid color(graylvl2);
+    border-right: 2px solid color(graylvl2);
+    height: 100%;
+    width: 100%;
+}
+
+.generalinfo1 {
+    grid-area: generalinfo1;
+}
+
+.generalinfo2 {
+    grid-area: generalinfo2;
+}
+
+.generalinfo {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-self: start;
+    text-align: left;
+
+    img {
+        height: 184px;
+        width: 184px;
+        margin-top: 30px;
+        border: 2px solid color(graylvl1);
+    }
+
+    .text{
+        width: 184px;
+        padding-top: 20px;
+    }
+    
+    p {
+        width: 100%;
+        margin: 0;
+        padding-top: 10px;
+    }
+}
+
+.csgoinfo1 {
+    grid-area: csgoinfo1;
+    border-right: 2px solid color(graylvl1);
+}
+
+.csgoinfo2 {
+    grid-area: csgoinfo2;
+    border-left: 2px solid color(graylvl1);
+}
+
+.csgoinfo {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-self: start;
+    text-align: left;
+
+    .text{
+        width: 184px;
+    }
+
+    p {
+        margin: 0;
+        padding-top: 10px;
+    }
+}
+
+h3 {
+    width: 100%;
+    border-bottom: 2px solid color(graylvl1);
+    text-align: center;
+    margin: 20px 0 5px;
+}
+
+.button3 {
+    padding-top: 17.5px;
+    text-align: center;
+
+    a {
+        width: 100%;
+        padding: 7.5px 30px;
+        background-color: color(graylvl2);
+        color: color(secondary);
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-decoration: none;
+        border-radius: 15px;
+    }    
+}
+
+.button4 {
+    padding-top: 20px;
+    text-align: center;
+
+    button {
+        border: none;
+        padding: 7.5px 30px;
+        background-color: color(graylvl2);
+        color: color(secondary);
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-decoration: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+}
+
+.button3 a:hover, .button4 button:hover {
+    background-color: color(graylvl4);
+    color: color(graylvl1);
+}
+
+.btnhover {
+    background-color: color(graylvl4);
+    color: color(graylvl1);
+}
+
+/* ADS */
+.ads {
+    height: 100%;
+    width: 100%;
+    background-color: color(graylvl3);
+}
+
+.ad1 {
+    grid-area: ad1;  
+}
+
+.ad2 {
+    grid-area: ad2;
+}
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    height: 100%;
+    width: 100%;
+    background-color: color(graylvl1);
+    color: color(secondary);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@import 'queries';
